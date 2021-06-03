@@ -16,7 +16,6 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
 ## Acceptance Criteria
 
-```md
 GIVEN a CMS-style blog site
 
 WHEN I visit the site for the first time
