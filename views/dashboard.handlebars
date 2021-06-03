@@ -1,6 +1,6 @@
 {{#each blogs as |blog|}}
   <div class='card border-secondary mb-3' style='max-width: 20rem;'>
-    <div class='card-header'>{{blog.title}}</div>
+    <div class='card-header'><a href='/api/blogs/editblog/{{blog.id}} '>{{blog.title}}</a></div>
     <div class='card-body'>
 
       <p class='card-text'>{{blog.content}}</p>
@@ -10,8 +10,9 @@
   </div>
 {{/each}}
 
-<h2>Create Post</h2>
+
 <form class='form add-blog-form'></form>
+<h2>Create Post</h2>
 <div class='form-group'>
     <a href='/api/blogs/createblog'><button class='btn btn-primary' type='submit'>Add blog</button></a>
   </div>
