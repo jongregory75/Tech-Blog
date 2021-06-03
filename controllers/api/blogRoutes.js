@@ -21,8 +21,29 @@ router.get('/createblog', withAuth, async (req, res) => {
   }
 });
 
+// localhost:3001/api/blogs/editblog via userId
+router.get('/editblog/:id', withAuth, async (req, res) => {
+
+  try {
+    const blogData = await Blog.findByPk(req.body, {
+      where: { id: req.body.id },
+    });
+    
+   console.table(blogData);
+
+    const blogs = blogData.map((blog) => blog.get({ plain: true }));
+
+    res.render('/editblog', {
+      blogs,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // localhost:3001/api/dashboard/put blogs via userId
-router.post('/createpost', async (req, res) => {
+router.post('/createpost', withAuth, async (req, res) => {
   try {
     const newBlog = await Blog.create({
       title: req.body.title,

@@ -5,7 +5,7 @@ const newBlogFormHandler = async (event) => {
   const content = document.querySelector('#blog-content').value.trim();
 
   if (title && content) {
-    const response = await fetch('/blogs/editblog', {
+    const response = await fetch('/api/blogs/editblog', {
       method: 'PUT',
       body: JSON.stringify({ title, content }),
       headers: { 'Content-Type': 'application/json' },

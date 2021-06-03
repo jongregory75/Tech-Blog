@@ -24,15 +24,15 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/edit', withAuth, async (req, res) => {
+router.get('/api/blogs/editblog', withAuth, async (req, res) => {
   try {
-    const blogData = await Blog.findAll({
-      where: { userId: req.session.userId },
+    const blogData = await Blog.findByPk({
+      where: { userId: req.body.blogId },
     });
 
     const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
-    res.render('editpost', {
+    res.render('/api/blogs/editblog', {
       blogs,
       loggedIn: req.session.loggedIn,
     });

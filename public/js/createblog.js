@@ -12,7 +12,8 @@ const newBlogFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard');
+      document.location.replace('/');
+      document.location.redirect('/')
     } else {
       alert(response.statusText);
     }
