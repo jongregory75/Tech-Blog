@@ -1,0 +1,18 @@
+{{#each blogs as |blog|}}
+  <div class='card border-secondary mb-3' style='max-width: 20rem;'>
+    <div class='card-header'>{{blog.title}}</div>
+    <div class='card-body'>
+
+      <p class='card-text'>{{blog.content}}</p>
+      <p class='card-text'>{{blog.user.name}} on {{blog.createdAt}}</p>
+    </div>
+    
+  </div>
+{{/each}}
+
+<h2>Create Post</h2>
+<form class='form add-blog-form'></form>
+<div class='form-group'>
+    <a href='/api/blogs/createblog'><button class='btn btn-primary' type='submit'>Add blog</button></a>
+  </div>
+</form>

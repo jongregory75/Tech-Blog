@@ -1,0 +1,11 @@
+{{#each blogs as |blog|}}
+  <div class='card border-secondary mb-3' style='max-width: 20rem;'>
+    <div class='card-header'>{{blog.title}}</div>
+    <div class='card-body'>
+
+      <p class='card-text'>{{blog.content}}</p>
+      <p class='card-text'>{{blog.user.name}} on {{blog.createdAt}}</p>
+    </div>
+    {{! still need to add the user and created date }}
+  </div>
+{{/each}}
