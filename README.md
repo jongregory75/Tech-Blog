@@ -20,28 +20,28 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 GIVEN a CMS-style blog site
 
 WHEN I visit the site for the first time
-THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
+:heavy_check_mark: THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
 
 WHEN I click on the homepage option
-THEN I am taken to the homepage
+:heavy_check_mark: THEN I am taken to the homepage
 
 WHEN I click on any other links in the navigation
-THEN I am prompted to either sign up or sign in
+:heavy_check_mark: THEN I am prompted to either sign up or sign in
 
 WHEN I choose to sign up
-THEN I am prompted to create a username and password
+:heavy_check_mark:THEN I am prompted to create a username and password
 
 WHEN I click on the sign-up button
-THEN my user credentials are saved and I am logged into the site
+:heavy_check_mark:THEN my user credentials are saved and I am logged into the site
 
 WHEN I revisit the site at a later time and choose to sign in
-THEN I am prompted to enter my username and password
+:heavy_check_mark:THEN I am prompted to enter my username and password
 
 WHEN I am signed in to the site
-THEN I see navigation links for the homepage, the dashboard, and the option to log out
+:heavy_check_mark:THEN I see navigation links for the homepage, the dashboard, and the option to log out
 
 WHEN I click on the homepage option in the navigation
-THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
+:heavy_check_mark:THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
 
 WHEN I click on an existing blog post
 THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
@@ -67,7 +67,7 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 
-```
+
 ## Technologies Used
  - bcrypt: user password hashing
  - bootswatch: css templates
@@ -80,32 +80,13 @@ THEN I am able to view comments but I am prompted to log in again before I can a
  - sequelize: mysql db helper library
  - watch: nodemon functionality for server change refresh 
 
-### Technical Acceptance Criteria
-    :heavy_check_mark: Application’s folder structure follows the Model-View-Controller paradigm.
-
-    :heavy_check_mark: Uses the [express-handlebars](https://www.npmjs.com/package/express-handlebars) package to implement Handlebars.js for your Views.
-
-    :heavy_check_mark: Application must be deployed to Heroku.
-
-### Deployment: 32%
-
-:heavy_check_mark: Application deployed at live URL.
-
-:heavy_check_mark: Application loads with no errors.
-
-:heavy_check_mark: Application GitHub URL submitted.
-
-:heavy_check_mark: GitHub repository contains application code.
-
 
 ## Links
 
 GitHub Repository: https://github.com/jongregory75/Tech-Blog
 
-Herouku: 
+Herouku Repository: https://git.heroku.com/hidden-gorge-73011.git
 
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
+Heroku Deployed: https://hidden-gorge-73011.herokuapp.com/
 
----
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
-# Tech-Blog
+
